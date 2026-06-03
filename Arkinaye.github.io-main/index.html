@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>Мой профиль</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Telegram Mini App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <div class="app-container">
+        <!-- Loading State -->
+        <div id="loading" class="loading-state">
+            <div class="spinner"></div>
+            <p>Загрузка профиля...</p>
+        </div>
+
+        <!-- Profile Content -->
+        <div id="profile-content" class="profile-content hidden">
+            <!-- Header -->
+            <div class="profile-header">
+                <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                        <path d="M4 20c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h1 id="username-display" class="username">Загрузка...</h1>
+                <p class="status-text">Профиль активен</p>
+            </div>
+
+            <!-- Profile Cards -->
+            <div class="profile-cards">
+                <!-- User ID Card -->
+                <div class="card">
+                    <div class="card-label">ID пользователя</div>
+                    <div id="user-id-display" class="card-value monospace">—</div>
+                    <button class="card-button copy-button" data-copy="user-id">Копировать</button>
+                </div>
+
+                <!-- Email Card -->
+                <div class="card">
+                    <div class="card-label">Электронная почта</div>
+                    <div id="email-display" class="card-value">—</div>
+                    <button class="card-button copy-button" data-copy="email">Копировать</button>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="refresh-btn" class="btn btn-primary">Обновить</button>
+                <button id="close-btn" class="btn btn-secondary">Закрыть</button>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="error-state" class="error-state hidden">
+            <div class="error-icon">⚠️</div>
+            <h2>Ошибка загрузки профиля</h2>
+            <p id="error-message">Что-то пошло не так...</p>
+            <button id="retry-btn" class="btn btn-primary">Попробовать снова</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
