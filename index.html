@@ -18,12 +18,46 @@
             <p>Загрузка профиля...</p>
         </div>
 
+        <!-- Menu State -->
+        <div id="menu-state" class="menu-state hidden">
+            <div class="menu-header">
+                <div class="avatar-placeholder">
+                    <img id="avatar-img" class="avatar-img hidden" alt="Avatar" />
+                    <svg id="avatar-fallback" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                        <path d="M4 20c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h1 id="menu-greeting" class="username">Привет!</h1>
+                <p class="status-text">Выберите действие, чтобы продолжить.</p>
+            </div>
+
+            <div class="menu-cards">
+                <div class="card interactive-card">
+                    <div class="card-label">Профиль</div>
+                    <div class="card-value">Просмотр профиля и изменение почты с подтверждением паролем.</div>
+                    <button id="open-profile-btn" class="card-button">Открыть профиль</button>
+                </div>
+                <div class="card card-placeholder">
+                    <div class="card-label">Пункт 2</div>
+                    <div class="card-value">Скоро здесь появится новый функционал.</div>
+                    <button class="card-button card-disabled" disabled>В разработке</button>
+                </div>
+                <div class="card card-placeholder">
+                    <div class="card-label">Пункт 3</div>
+                    <div class="card-value">Здесь будет дополнительная опция.</div>
+                    <button class="card-button card-disabled" disabled>В разработке</button>
+                </div>
+            </div>
+        </div>
+
         <!-- Profile Content -->
         <div id="profile-content" class="profile-content hidden">
             <!-- Header -->
             <div class="profile-header">
                 <div class="avatar-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <img id="avatar-img" class="avatar-img hidden" alt="Avatar" />
+                    <svg id="avatar-fallback" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
                         <path d="M4 20c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
@@ -49,8 +83,17 @@
                 </div>
             </div>
 
+            <div class="card update-card">
+                <div class="card-label">Изменить почту</div>
+                <input id="new-email-input" type="email" class="input-field" placeholder="Новая почта" autocomplete="email" />
+                <input id="password-input" type="password" class="input-field" placeholder="Пароль для подтверждения" autocomplete="current-password" />
+                <button id="save-email-btn" class="btn btn-primary">Сохранить почту</button>
+                <p id="update-status" class="hint-text"></p>
+            </div>
+
             <!-- Action Buttons -->
             <div class="action-buttons">
+                <button id="back-btn" class="btn btn-secondary">Назад</button>
                 <button id="refresh-btn" class="btn btn-primary">Обновить</button>
                 <button id="close-btn" class="btn btn-secondary">Закрыть</button>
             </div>

@@ -70,6 +70,46 @@ body {
     font-weight: 500;
 }
 
+/* ===== Menu State ===== */
+.menu-state {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 16px;
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu-state.hidden {
+    display: none;
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 32px 0 16px;
+}
+
+.menu-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-placeholder .card-value {
+    color: #7f7f88;
+}
+
+.card-disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
 /* ===== Profile Content ===== */
 .profile-content {
     width: 100%;
@@ -219,6 +259,30 @@ body {
 
 .card-button.copied {
     color: #31a24c;
+}
+
+.input-field {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #d9d9db;
+    background: #f8f8fa;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: #000000;
+    outline: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.input-field:focus {
+    border-color: #0084ff;
+    background: #ffffff;
+}
+
+.hint-text {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #65676b;
+    line-height: 1.4;
 }
 
 /* ===== Action Buttons ===== */
@@ -384,6 +448,25 @@ body {
 
     .card-value {
         color: #ffffff;
+    }
+
+    .card-placeholder .card-value {
+        color: #b3b3b3;
+    }
+
+    .input-field {
+        background: #121212;
+        border-color: #333333;
+        color: #ffffff;
+    }
+
+    .input-field:focus {
+        background: #1a1a1a;
+        border-color: #4f8cff;
+    }
+
+    .hint-text {
+        color: #b3b3b3;
     }
 
     .btn-secondary {
