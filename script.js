@@ -260,7 +260,7 @@ function displayReferralData(data) {
     referralProgressFill.style.width = `${progress}%`;
     referralProgressWrapper.classList.remove('hidden');
 
-    currentReferralLink = data.referral_link || `https://t.me/dasLGVJbnhwmer_bot?start=${currentUserId}`;
+    currentReferralLink = data.referral_link || `https://t.me/steisy131209_bot?start=${currentUserId}`;
 }
 
 function setReferralCardError() {
@@ -269,7 +269,7 @@ function setReferralCardError() {
     referralReward.textContent = '⭐ Получено: —';
     referralLevel.textContent = '🏆 Уровень: —';
     referralProgressWrapper.classList.add('hidden');
-    currentReferralLink = `https://t.me/dasLGVJbnhwmer_bot?start=${currentUserId}`;
+    currentReferralLink = `https://t.me/steisy131209_bot?start=${currentUserId}`;
 }
 
 function calculateReferralProgress(count) {
