@@ -93,14 +93,14 @@ async function loadProfile() {
         showLoading();
         
         // Получить user_id из Telegram Mini App
-        const userId = tg.initDataUnsafe?.user?.id;
+        const user_id = tg.initDataUnsafe?.user?.id;
         
-        if (!userId) {
+        if (!user_id) {
             throw new Error('Не удалось получить ID пользователя из Telegram');
         }
         
         // Запрос профиля с backend
-        const response = await fetch(`${CONFIG.API_BASE_URL}${CONFIG.PROFILE_ENDPOINT}?user_id=${userId}`, {
+        const response = await fetch(`${CONFIG.API_BASE_URL}${CONFIG.PROFILE_ENDPOINT}?user_id=${user_id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
