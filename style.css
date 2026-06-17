@@ -202,6 +202,7 @@ body {
 
 .card {
     background: #ffffff;
+    color: #111111;
     border-radius: 12px;
     padding: 16px;
     border: 1px solid #e5e5ea;
@@ -226,7 +227,7 @@ body {
 
 .card-value {
     font-size: 16px;
-    color: #000000;
+    color: #111111;
     font-weight: 500;
     word-break: break-all;
     line-height: 1.4;
@@ -259,6 +260,140 @@ body {
 
 .card-button.copied {
     color: #31a24c;
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.referral-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.referral-line {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.referral-progress-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 10px;
+    border-radius: 999px;
+    background: #e5e5ea;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #0084ff 0%, #0066cc 100%);
+    transition: width 0.3s ease;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 16px;
+    z-index: 1200;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    color: #111111;
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 1;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.16);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #111111;
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    color: #212121;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.referral-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 340px;
+    overflow-y: auto;
+}
+
+.referral-item {
+    background: #f8f8fa;
+    color: #111111;
+    border-radius: 14px;
+    padding: 14px 16px;
+}
+
+.referral-item p {
+    margin: 0;
+    line-height: 1.4;
+    color: #111111;
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+    background: #141414;
+    color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 999px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1300;
+    pointer-events: none;
+}
+
+.toast.visible {
+    opacity: 1;
 }
 
 .input-field {
